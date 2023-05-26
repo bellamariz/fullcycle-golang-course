@@ -1,2 +1,2 @@
-# fullcycle-golang-course
-Go Expert Course by Full Cycle
+# Go Expert Course by Full Cycle
+Code used for studying online course "Go Expert" by Full Cycle platform.
