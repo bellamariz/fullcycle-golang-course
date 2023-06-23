@@ -1,6 +1,9 @@
 package foundation
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 // creating new types
 type ID int
@@ -52,4 +55,33 @@ func Maps() {
 	for id, member := range myMap {
 		fmt.Printf("Band member %s has ID %d\n", member, id)
 	}
+}
+
+// functions: generic
+func Sum(a, b int) (int, error) {
+	if a+b >= 50 {
+		return a + b, errors.New("sum bigger than 50")
+	}
+
+	return a + b, nil
+}
+
+// function: multiple unknown parameters
+func SumMany(nums ...int) int {
+	total := 0
+
+	for _, num := range nums {
+		total += num
+	}
+
+	return total
+}
+
+// function: anonymous functions/function-within-function
+func FuncWithinFunc() func() int {
+	newTotal := func() int {
+		return SumMany(1, 2, 3, 4, 5)
+	}
+
+	return newTotal
 }
