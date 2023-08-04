@@ -9,10 +9,10 @@ import (
 type ID int
 
 // global variables
-var number ID = 12
+var myNumber ID = 12
 
 func Types() {
-	fmt.Printf("Value: %v - Type: %T\n", number, number)
+	fmt.Printf("Value: %v - Type: %T\n", myNumber, myNumber)
 }
 
 // array: unmutable size, ordered

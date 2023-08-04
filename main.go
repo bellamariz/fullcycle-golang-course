@@ -30,10 +30,11 @@ func callFoundation() {
 	foundation.Structs()
 	foundation.Pointers()
 	foundation.TypeAssertion()
+	foundation.Generics()
 }
 
 func main() {
 	// callFoundation()
 
-	foundation.TypeAssertion()
+	foundation.Generics()
 }
