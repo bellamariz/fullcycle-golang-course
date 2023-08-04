@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"fullcycle-golang-course/main/base"
 	"fullcycle-golang-course/main/foundation"
 )
 
@@ -27,14 +26,11 @@ func callFoundation() {
 		return foundation.SumMany(1, 2, 3, 4, 5)
 	}
 	fmt.Printf("Total: %d\n", newTotal())
-}
 
-func callBase() {
-	base.Structs()
-	base.Pointers()
+	foundation.Structs()
+	foundation.Pointers()
 }
 
 func main() {
-	// callFoundation()
-	callBase()
+	callFoundation()
 }

@@ -1,8 +1,8 @@
-package base
+package foundation
 
 import "fmt"
 
-// foundation for more complex data types, such as structs
+// foundation for more complex data types, such as structs, and pointers
 
 type Client struct {
 	Name    string
@@ -24,7 +24,15 @@ type Company struct {
 	Active bool
 }
 
+type Account struct {
+	Balance float64
+}
+
 // structs have methods
+
+func (a *Account) Deposit(value float64) {
+	a.Balance += value
+}
 
 func (cp *Company) Deactivate() {
 	cp.Active = false
@@ -43,8 +51,6 @@ type Person interface {
 func Deactivate(p Person) {
 	p.Deactivate()
 }
-
-// test program
 
 func Structs() {
 	patrick := Client{
@@ -79,7 +85,14 @@ func sumP(a, b *int) int {
 	return *a + *b
 }
 
+// struct created with pointer
+
+func NewAccount() *Account {
+	return &Account{Balance: 0}
+}
+
 // pointer - variable that contains the address to another variable in memory
+
 func Pointers() {
 	a := 10
 	var p *int = &a
@@ -100,4 +113,10 @@ func Pointers() {
 
 	sp := sumP(&varA, &varB)
 	fmt.Printf("var: %d - sum: %d\n", varA, sp)
+
+	// structs are normally defined with pointers, instead of statically, to guarantee data consistency across the project
+	account := NewAccount()
+	account.Deposit(200)
+
+	fmt.Printf("The new account balance is %.2f\n", account.Balance)
 }
