@@ -2,7 +2,7 @@ package foundation
 
 import "fmt"
 
-// foundation for more complex data types, such as structs, and pointers
+// foundation for more complex data types, such as structs, interfaces and pointers
 
 type Client struct {
 	Name    string
@@ -26,6 +26,12 @@ type Company struct {
 
 type Account struct {
 	Balance float64
+}
+
+// struct created with pointer
+
+func NewAccount() *Account {
+	return &Account{Balance: 0}
 }
 
 // structs have methods
@@ -52,6 +58,20 @@ func Deactivate(p Person) {
 	p.Deactivate()
 }
 
+// auxiliary functions
+
+func sum(a, b int) int {
+	a = 50
+	return a + b
+}
+
+func sumP(a, b *int) int {
+	*a = 50
+	return *a + *b
+}
+
+// test programs
+
 func Structs() {
 	patrick := Client{
 		Name:   "Patrick Stump",
@@ -73,22 +93,6 @@ func Structs() {
 	Deactivate(&falloutboy)
 
 	fmt.Println(patrick, falloutboy)
-}
-
-func sum(a, b int) int {
-	a = 50
-	return a + b
-}
-
-func sumP(a, b *int) int {
-	*a = 50
-	return *a + *b
-}
-
-// struct created with pointer
-
-func NewAccount() *Account {
-	return &Account{Balance: 0}
 }
 
 // pointer - variable that contains the address to another variable in memory
