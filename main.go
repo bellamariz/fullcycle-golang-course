@@ -29,8 +29,11 @@ func callFoundation() {
 
 	foundation.Structs()
 	foundation.Pointers()
+	foundation.TypeAssertion()
 }
 
 func main() {
-	callFoundation()
+	// callFoundation()
+
+	foundation.TypeAssertion()
 }
