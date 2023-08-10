@@ -75,7 +75,7 @@ func Generics() {
 	fmt.Printf("Sum map of integers: %v\n", sumMap(intMap))
 	fmt.Printf("Sum map of floats: %v\n", sumMap(floatMap))
 
-	// using constraints (struct + generics)
+	// using constraints (interface + generics)
 	fmt.Printf("Sum map of integers with constraint: %v\n", sumMapWithConstraint(intMap))
 	fmt.Printf("Sum map of floats with constraint: %v\n", sumMapWithConstraint(floatMap))
 
