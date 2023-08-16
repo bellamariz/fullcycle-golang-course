@@ -33,6 +33,7 @@ func callFoundation() {
 
 	separator("Loops and Conditionals")
 	foundation.Loops()
+	foundation.Conditionals()
 }
 
 func main() {
