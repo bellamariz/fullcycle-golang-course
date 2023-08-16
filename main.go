@@ -7,9 +7,9 @@ import (
 )
 
 func separator(s string) {
+	fmt.Printf("\n-------------------------------------------------")
+	fmt.Printf("\n-----%s-----", s)
 	fmt.Printf("\n-------------------------------------------------\n")
-	fmt.Printf("--------------------%s--------------------\n", s)
-	fmt.Printf("-------------------------------------------------\n")
 }
 
 func callFoundation() {
@@ -30,6 +30,9 @@ func callFoundation() {
 
 	separator("Packages and Modules")
 	foundation.Modules()
+
+	separator("Loops and Conditionals")
+	foundation.Loops()
 }
 
 func main() {
