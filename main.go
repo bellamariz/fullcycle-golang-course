@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"fullcycle-golang-course/main/foundation"
+
+	"github.com/bellamariz/fullcycle-golang-course/foundation"
 )
 
 func separator(s string) {
@@ -26,6 +27,9 @@ func callFoundation() {
 	separator("Data Types")
 	foundation.TypeAssertion()
 	foundation.Generics()
+
+	separator("Packages and Modules")
+	foundation.Modules()
 }
 
 func main() {

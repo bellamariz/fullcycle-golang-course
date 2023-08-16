@@ -1,3 +1,3 @@
-module fullcycle-golang-course/main
+module github.com/bellamariz/fullcycle-golang-course
 
 go 1.20
