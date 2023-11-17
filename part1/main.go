@@ -1,9 +1,9 @@
-package main
+package part1
 
 import (
 	"fmt"
 
-	"github.com/bellamariz/fullcycle-golang-course/foundation"
+	"github.com/bellamariz/fullcycle-golang-course/part1/foundation"
 )
 
 func separator(s string) {

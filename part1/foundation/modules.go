@@ -3,7 +3,7 @@ package foundation
 import (
 	"fmt"
 
-	"github.com/bellamariz/fullcycle-golang-course/foundation/mypackage"
+	"github.com/bellamariz/fullcycle-golang-course/part1/foundation/mypackage"
 )
 
 // without importing the 'mypackage' package, this module this cannot find the function MySum()
