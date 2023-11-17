@@ -3,6 +3,8 @@ package notable_packages
 
 import (
 	"fmt"
+
+	"github.com/bellamariz/fullcycle-golang-course/notable_packages/files"
 )
 
 func separator(s string) {
@@ -13,4 +15,7 @@ func separator(s string) {
 
 func CallNotablePackages() {
 	separator("Manipulating Files")
+
+	files.CreateFile()
+	files.ReadFile()
 }
