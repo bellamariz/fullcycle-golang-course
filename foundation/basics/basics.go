@@ -57,8 +57,8 @@ func Slices() {
 	fmt.Printf("Length: %d - Capacity: %d - Slice: %v\n", len(mySlice), cap(mySlice), mySlice)
 
 	// slices are accessed by indexing and can be re-sliced into smaller slices
-	fmt.Printf("Length: %d - Capacity: %d - Slice: %v \n", len(mySlice[:2]), cap(mySlice), mySlice[:2])
-	fmt.Printf("Length: %d - Capacity: %d - Slice: %v \n", len(mySlice[2:]), cap(mySlice), mySlice[2:])
+	fmt.Printf("Length: %d - Capacity: %d - Slice: %v\n", len(mySlice[:2]), cap(mySlice), mySlice[:2])
+	fmt.Printf("Length: %d - Capacity: %d - Slice: %v\n", len(mySlice[2:]), cap(mySlice), mySlice[2:])
 
 	// when we hit max capacity, to append new values, Golang doubles the original size (6 -> 12)
 	mySlice = append(mySlice, 60, 70)
