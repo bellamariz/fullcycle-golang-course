@@ -1,4 +1,4 @@
-package foundation
+package loop_conditional
 
 import (
 	"errors"

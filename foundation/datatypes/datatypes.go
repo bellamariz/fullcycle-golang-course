@@ -1,4 +1,4 @@
-package foundation
+package datatypes
 
 import "fmt"
 
